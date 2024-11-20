@@ -66,7 +66,7 @@ Initially faced issues with routing when deployed to Vercel.
 Solution: Configured Vercel settings to handle React routing properly by adding a _redirects file.
 Deployment
 This application is deployed on Vercel. You can access it live at:
-https://your-vercel-app-url.vercel.app
+https://meraken-assignment-ten.vercel.app/
 
 ## Steps to Deploy
 ## Build the Project:
