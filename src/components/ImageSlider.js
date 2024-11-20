@@ -3,18 +3,17 @@ import React, { useState, useEffect } from 'react';
 const ImageSlider = () => {
   // Image arrays for mobile and laptop views
   const mobileImages = [
-    'https://res.cloudinary.com/dztz5ltuq/image/upload/v1730971232/Gemini_Generated_Image_r46f4r46f4r46f4r_um5ze0.jpg',
-    'https://res.cloudinary.com/dztz5ltuq/image/upload/v1730972055/Join_the_Ride_You_Can_Trust_20241107_150126_0000_khswnj.png',
-    'https://res.cloudinary.com/dztz5ltuq/image/upload/v1730970960/Every_step_from_choosing_to_owning_made_simple_and_secure_with_TRUST_N_RI_20241107_143913_0000_fgwd4e.jpg',
-    'https://res.cloudinary.com/dztz5ltuq/image/upload/v1730970962/Your_paragraph_text_20241107_144125_0000_ufu28x.png',
-    'https://res.cloudinary.com/dztz5ltuq/image/upload/v1730972801/Join_Thousands_on_the_Road_to_Trust_20241107_151547_0000_wrkqar.png',
+    'https://res.cloudinary.com/dztz5ltuq/image/upload/v1732099734/Gemini_Generated_Image_lzbupolzbupolzbu_x1mdpf.jpg',
+    'https://res.cloudinary.com/dztz5ltuq/image/upload/v1732099734/Gemini_Generated_Image_xaxqbwxaxqbwxaxq_fbw0au.jpg',
+    'https://res.cloudinary.com/dztz5ltuq/image/upload/v1732099735/Gemini_Generated_Image_kfq7lnkfq7lnkfq7_j8nsfr.jpg',
+    
   ];
 
   const laptopImages = [
-    'https://res.cloudinary.com/dztz5ltuq/image/upload/v1731064298/freepik__dont-add-any-extra-person-in-empty-space-while-exp__99058_ctjfck.png',
-    'https://res.cloudinary.com/dztz5ltuq/image/upload/v1731064297/freepik__please-dont-add-any-extra-human-or-person-in-empty__84562_drjpuy.png',
-    'https://res.cloudinary.com/dztz5ltuq/image/upload/v1731064298/freepik__dont-add-any-extra-man-or-women-or-person-in-empty__25075_okzid8.png',
-    'https://res.cloudinary.com/dztz5ltuq/image/upload/v1731064297/freepik__please-dont-add-any-extra-human-or-person-in-empty__25074_ugyysq.png',
+    'https://res.cloudinary.com/dztz5ltuq/image/upload/v1732098563/freepik__dont-write-any-word-or-letter-in-empty-space-while__82509_hwxdnq.png',
+    'https://res.cloudinary.com/dztz5ltuq/image/upload/v1732098563/freepik__dont-write-any-word-or-letter-in-empty-space-while__82508_qsuyzw.png',
+    'https://res.cloudinary.com/dztz5ltuq/image/upload/v1732098564/freepik__expand__31544_tiicue.png',
+   
    
     
   ];

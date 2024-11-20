@@ -56,7 +56,7 @@ const MotivationSection = () => {
 
             {/* Sell Your Car Button */}
             <div className="flex justify-center mt-3 mb-1">
-            <Link to="/">
+            <Link to="/all-listings">
     <button className="bg-white text-blue-600 px-5 py-3 rounded-full shadow-md border border-blue-600 hover:bg-blue-50 transition-transform duration-200 hover:scale-105">
         Order NOw
     </button>

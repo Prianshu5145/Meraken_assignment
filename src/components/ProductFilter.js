@@ -11,7 +11,7 @@ const ProductFilter = () => {
 
   const fetchProducts = async () => {
     try {
-      const response = await axios.get('http://localhost:5000/api/listings/assgnlistings');
+      const response = await axios.get('https://trustnride-backend-production.up.railway.app/api/listings/assgnlistings');
       console.log("API Response:", response.data);
       const fetchedProducts = Array.isArray(response.data) ? response.data : [];
       setProducts(fetchedProducts);
@@ -49,27 +49,25 @@ const ProductFilter = () => {
   };
 
   return (
-    <div className="max-w-7xl mx-auto p-6 bg-gray-50">
+    <div className="max-w-7xl mx-auto p-6 bg-white">
       <h1 className="text-3xl font-semibold text-center text-gray-800 mb-8">Product Filter</h1>
 
       <form onSubmit={handleSubmit}>
-        {/* Make all filters stack vertically */}
         <div className="flex flex-col space-y-6 mb-6">
-          
           <div className="flex flex-col">
             <label className="font-medium text-lg text-gray-700 mb-2">Price Range</label>
             <div className="flex flex-col space-y-2">
               <input 
                 type="number" 
                 value={priceRange[0]} 
-                onChange={(e) => setPriceRange([parseInt(e.target.value), priceRange[1]])} 
+                onChange={(e) => setPriceRange([parseInt(e.target.value) || 0, priceRange[1]])} 
                 className="px-4 py-2 border rounded-md shadow-sm focus:ring-2 focus:ring-indigo-500"
                 placeholder="Min Price"
               />
               <input 
                 type="number" 
                 value={priceRange[1]} 
-                onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value)])} 
+                onChange={(e) => setPriceRange([priceRange[0], parseInt(e.target.value) || 0])} 
                 className="px-4 py-2 border rounded-md shadow-sm focus:ring-2 focus:ring-indigo-500"
                 placeholder="Max Price"
               />
@@ -110,7 +108,6 @@ const ProductFilter = () => {
               placeholder="Search by title or description"
             />
           </div>
-
         </div>
 
         <div className="flex justify-center mt-4">

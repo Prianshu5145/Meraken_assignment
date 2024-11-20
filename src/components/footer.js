@@ -22,7 +22,7 @@ const Footer = () => {
                         <h3 className="text-xl font-semibold mb-3">Explore</h3>
                         <ul className="space-y-2">
                             <li><a href="/" className="hover:text-blue-500 transition">Home</a></li>
-                            <li><a href="/Sell" className="hover:text-blue-500 transition">Sell Your Product</a></li>
+                            <li><a href="/Sell" className="hover:text-blue-500 transition">Buy a Product</a></li>
                             <li><a href="/buy" className="hover:text-blue-500 transition">Exchange a Product</a></li>
                             <li><a href="/Gallery" className="hover:text-blue-500 transition">Trusted Reviews</a></li>
                             <li><a href="/About" className="hover:text-blue-500 transition">About Us</a></li>
@@ -81,7 +81,7 @@ const Footer = () => {
                     <div className="flex justify-between items-center flex-wrap gap-4">
                         
                         {/* Copyright Text */}
-                        <p className="text-gray-500 text-sm">© 2024 TRUST N RIDE. All rights reserved.</p>
+                        <p className="text-gray-500 text-sm">© 2024 DigiMitra. All rights reserved.</p>
 
                         {/* Social Media Links */}
                         <div className="flex space-x-6">
