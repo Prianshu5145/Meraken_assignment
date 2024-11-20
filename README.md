@@ -104,7 +104,11 @@ MongoDB: Database for storing product data
 Vercel: Deployment platform
 ## Screenshots
 Home Page
+https://res.cloudinary.com/dztz5ltuq/image/upload/v1732102342/Screenshot_2006_ktrudy.png
+https://res.cloudinary.com/dztz5ltuq/image/upload/v1732102342/Screenshot_2010_bq16p5.png
 
 Product Filters
-
+https://res.cloudinary.com/dztz5ltuq/image/upload/v1732102341/Screenshot_2007_yhd0g4.png
 View Details
+https://res.cloudinary.com/dztz5ltuq/image/upload/v1732102342/Screenshot_2009_v0gkp0.png
+https://res.cloudinary.com/dztz5ltuq/image/upload/v1732102342/Screenshot_2012_n1ynbw.png
