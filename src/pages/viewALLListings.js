@@ -29,7 +29,7 @@ const ViewAllListings = () => {
   const fetchListings = async () => {
     try {
       const response = await axios.get(
-        'http://localhost:5000/api/listings/assgnlistings'
+        'https://trustnride-backend-production.up.railway.app/api/listings/assgnlistings'
       );
       setListings(response.data.data);
       console.log('l',listings);

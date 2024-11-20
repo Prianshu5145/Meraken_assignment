@@ -23,7 +23,7 @@ const ViewDetails = () => {
     useEffect(() => {
         const fetchListing = async () => {
             try {
-                const response = await axios.get(`http://localhost:5000/api/listings/assgnfind/${listingId}`);
+                const response = await axios.get(`https://trustnride-backend-production.up.railway.app/api/listings/assgnfind/${listingId}`);
                 setListing(response.data);
                 console.log('m',listingId);
                 console.log('l',listing);
