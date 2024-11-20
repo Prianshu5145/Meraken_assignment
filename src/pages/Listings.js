@@ -16,7 +16,7 @@ const ProductListings = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const response = await axios.get('http://localhost:5000/api/listings/assgnlistings');
+        const response = await axios.get('https://trustnride-backend-production.up.railway.app/api/listings/assgnlistings');
         console.log(response.data); // Debugging to see the response structure
        
         if (response.data.success) {
