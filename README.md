@@ -12,7 +12,7 @@ In the project directory, you can run:
 
 ## npm start
 Runs the app in the development mode.
-Open http://localhost:3000 to view it in your browser.
+Open https://meraken-assignment-ten.vercel.app/ to view it in your browser.
 
 The page will reload if you make edits.
 You may also see any lint errors in the console.
@@ -72,27 +72,27 @@ https://your-vercel-app-url.vercel.app
 ## Build the Project:
 Run npm run build to generate the production-ready build files.
 
-## Sign Up/Log In to Vercel:
+ Sign Up/Log In to Vercel:
 Create an account on Vercel if you don’t already have one.
 
-## Connect Git Repository:
+ Connect Git Repository:
 Link your GitHub repository to Vercel for seamless deployment.
 
-## Configure Project:
+ Configure Project:
 Select the appropriate project settings (e.g., root directory) during setup.
 
-## Deploy:
+ Deploy:
 Click Deploy and wait for the build to complete. Your app will be live shortly.
 
-## Handle React Routes:
+ Handle React Routes:
 To ensure React routing works on Vercel, add a _redirects file in the public folder with the following content:
 
 
 Monitor and Update:
 Use Vercel’s dashboard to monitor deployments and easily push updates via Git.
 
-## Optional Enhancements
-## Enhanced Filters: Added advanced filters like Bluetooth version to cater to specific product categories.
+ Optional Enhancements
+ Enhanced Filters: Added advanced filters like Bluetooth version to cater to specific product categories.
 Improved UX: Designed an intuitive UI with easy-to-use controls for filtering products.
 Optimized Performance: Minimized API calls and used efficient rendering techniques to improve load times.
 Libraries and Tools
