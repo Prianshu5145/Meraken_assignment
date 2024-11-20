@@ -2,63 +2,44 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
 const ProductFilter = () => {
-  const [products, setProducts] = useState([]);  // State to hold all products
-  const [filteredProducts, setFilteredProducts] = useState([]);  // State for filtered products
+  const [products, setProducts] = useState([]);
+  const [filteredProducts, setFilteredProducts] = useState([]);
   const [priceRange, setPriceRange] = useState([0, 10000]);
   const [selectedCategory, setSelectedCategory] = useState('');
   const [bluetoothVersion, setBluetoothVersion] = useState('');
-  const [searchQuery, setSearchQuery] = useState('');  // State for search query
+  const [searchQuery, setSearchQuery] = useState('');
 
-  // Fetch products from the backend
   const fetchProducts = async () => {
     try {
       const response = await axios.get('http://localhost:5000/api/listings/assgnlistings');
-      
-      // Log the response to ensure it’s in the expected format
       console.log("API Response:", response.data);
-      
-      // Ensure the response data is an array
       const fetchedProducts = Array.isArray(response.data) ? response.data : [];
-      setProducts(fetchedProducts);  // Set products from API response
+      setProducts(fetchedProducts);
     } catch (error) {
       console.error("Error fetching products:", error);
     }
   };
 
   useEffect(() => {
-    // Call the fetchProducts function to get the product data on initial render
     fetchProducts();
-  }, []);  // Empty dependency array, so this runs only once on component mount
+  }, []);
 
-  // Filter products based on criteria
   const applyFilters = () => {
     if (!Array.isArray(products)) {
       console.error("Products is not an array:", products);
       return;
     }
 
-    // Filter products by price, category, bluetooth version, and search query
     const filtered = products.filter(product => {
-      // Price range condition
       const isPriceValid = product.offerPrice >= priceRange[0] && product.offerPrice <= priceRange[1];
-      
-      // Category condition (only apply if category is selected)
       const isCategoryValid = selectedCategory ? product.Category === selectedCategory : true;
-      
-      // Bluetooth version condition (only apply if Bluetooth version is selected)
       const isBluetoothValid = bluetoothVersion ? product.Specification.BluetoothVersion === bluetoothVersion : true;
-      
-      // Search query condition (checks title and description)
       const isSearchValid = product.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
                             product.description.toLowerCase().includes(searchQuery.toLowerCase());
-      
-      // Only include products that satisfy the conditions
       return isPriceValid && isCategoryValid && isBluetoothValid && isSearchValid;
     });
 
-    console.log("Filtered Products:", filtered);  // Log the filtered products for debugging
-
-    // Update the filtered products state
+    console.log("Filtered Products:", filtered);
     setFilteredProducts(filtered);
   };
 
@@ -71,14 +52,13 @@ const ProductFilter = () => {
     <div className="max-w-7xl mx-auto p-6 bg-gray-50">
       <h1 className="text-3xl font-semibold text-center text-gray-800 mb-8">Product Filter</h1>
 
-      {/* Filters Section */}
       <form onSubmit={handleSubmit}>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-6">
+        {/* Make all filters stack vertically */}
+        <div className="flex flex-col space-y-6 mb-6">
           
-          {/* Price Range Filter */}
           <div className="flex flex-col">
             <label className="font-medium text-lg text-gray-700 mb-2">Price Range</label>
-            <div className="flex space-x-4">
+            <div className="flex flex-col space-y-2">
               <input 
                 type="number" 
                 value={priceRange[0]} 
@@ -96,7 +76,6 @@ const ProductFilter = () => {
             </div>
           </div>
 
-          {/* Category Filter */}
           <div className="flex flex-col">
             <label className="font-medium text-lg text-gray-700 mb-2">Category</label>
             <select 
@@ -106,11 +85,9 @@ const ProductFilter = () => {
               <option value="">All Categories</option>
               <option value="Wearables">Wearables</option>
               <option value="Smartphones">Smartphones</option>
-              {/* Add more categories here */}
             </select>
           </div>
 
-          {/* Bluetooth Version Filter */}
           <div className="flex flex-col">
             <label className="font-medium text-lg text-gray-700 mb-2">Bluetooth Version</label>
             <select 
@@ -120,11 +97,9 @@ const ProductFilter = () => {
               <option value="">All Versions</option>
               <option value="5.3">5.3</option>
               <option value="4.0">4.0</option>
-              {/* Add more versions here */}
             </select>
           </div>
 
-          {/* Search Bar */}
           <div className="flex flex-col">
             <label className="font-medium text-lg text-gray-700 mb-2">Search</label>
             <input 
@@ -138,7 +113,6 @@ const ProductFilter = () => {
 
         </div>
 
-        {/* Submit Button */}
         <div className="flex justify-center mt-4">
           <button type="submit" className="px-6 py-2 bg-indigo-600 text-white rounded-md shadow-sm hover:bg-indigo-700 focus:ring-2 focus:ring-indigo-500">
             Apply Filters
@@ -146,7 +120,6 @@ const ProductFilter = () => {
         </div>
       </form>
 
-      {/* Display Filtered Products */}
       <div className="space-y-8">
         <h2 className="text-2xl font-semibold text-gray-800 mb-4">Filtered Products</h2>
         {filteredProducts.length > 0 ? (
