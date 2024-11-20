@@ -21,7 +21,7 @@ You may also see any lint errors in the console.
 Launches the test runner in the interactive watch mode.
 See the section about running tests for more information.
 
-npm run build
+## npm run build
 Builds the app for production to the build folder.
 It correctly bundles React in production mode and optimizes the build for the best performance.
 
@@ -30,7 +30,7 @@ Your app is ready to be deployed!
 
 See the section about deployment for more information.
 
-npm run eject
+## npm run eject
 Note: this is a one-way operation. Once you eject, you can't go back!
 
 If you aren’t satisfied with the build tool and configuration choices, you can eject at any time. This command will remove the single build dependency from your project.
@@ -39,7 +39,7 @@ Instead, it will copy all the configuration files and the transitive dependencie
 
 All of the commands except eject will still work, but they will point to the copied scripts so you can tweak them.
 
-Challenges Faced
+## Challenges Faced
 State Management for Filters:
 
 Managing multiple filters dynamically and ensuring a smooth user experience was tricky.
@@ -68,33 +68,31 @@ Deployment
 This application is deployed on Vercel. You can access it live at:
 https://your-vercel-app-url.vercel.app
 
-Steps to Deploy
-Build the Project:
+## Steps to Deploy
+## Build the Project:
 Run npm run build to generate the production-ready build files.
 
-Sign Up/Log In to Vercel:
+## Sign Up/Log In to Vercel:
 Create an account on Vercel if you don’t already have one.
 
-Connect Git Repository:
+## Connect Git Repository:
 Link your GitHub repository to Vercel for seamless deployment.
 
-Configure Project:
+## Configure Project:
 Select the appropriate project settings (e.g., root directory) during setup.
 
-Deploy:
+## Deploy:
 Click Deploy and wait for the build to complete. Your app will be live shortly.
 
-Handle React Routes:
+## Handle React Routes:
 To ensure React routing works on Vercel, add a _redirects file in the public folder with the following content:
 
-plaintext
-Copy code
-/*    /index.html   200
+
 Monitor and Update:
 Use Vercel’s dashboard to monitor deployments and easily push updates via Git.
 
-Optional Enhancements
-Enhanced Filters: Added advanced filters like Bluetooth version to cater to specific product categories.
+## Optional Enhancements
+## Enhanced Filters: Added advanced filters like Bluetooth version to cater to specific product categories.
 Improved UX: Designed an intuitive UI with easy-to-use controls for filtering products.
 Optimized Performance: Minimized API calls and used efficient rendering techniques to improve load times.
 Libraries and Tools
@@ -104,7 +102,7 @@ Tailwind CSS: Styling and responsive design
 Node.js: Backend server (separate setup)
 MongoDB: Database for storing product data
 Vercel: Deployment platform
-Screenshots
+## Screenshots
 Home Page
 
 Product Filters
